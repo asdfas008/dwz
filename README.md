@@ -1,1 +1,15 @@
 # dwz
+
+
+### 伪静态
+```
+location ~* (runtime|application)/{
+	return 403;
+}
+location / {
+	if (!-e $request_filename){
+		rewrite  ^(.*)$  /index.php?s=$1  last;   break;
+	}
+}
+
+```
