@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>雀展短网址</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!--标准mui.css-->
+    <link rel="stylesheet" href="./mui/css/mui.min.css">
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav" style="background-color: #2f323b;">
+    <h1 class="mui-title" style="color: #ffffff;font-size: 24px;font-weight: bold">雀展短网址</h1>
+</header>
+<div class="mui-content">
+</div>
+<script src="./mui/js/mui.min.js"></script>
+<script src="./mui/config.js"></script>
+<script src="https://mat1.gtimg.com/libs/jquery/1.12.0/jquery.js"></script>
+<script type="text/javascript" charset="utf-8">
+    //mui初始化
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    function getQueryVariable(variable){
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+    function showDialog() {
+        var btnArray = ['确定'];
+        mui.prompt('网址访问受限制，请输入密码访问：', '输入密码', '解锁此网址', btnArray, function(e) {
+            $.ajax({
+                type: 'POST',
+                url: API_SERVER+'/api/checkPwd',
+                data: {
+                    dwz:getQueryVariable('dwz'),
+                    pwd:e.value
+                },
+                dataType: "json",
+                success: function (ret, res) {
+                    if (ret.code == 0) {
+                        location.href = ret.url;
+                    }else{
+                        mui.toast(ret.msg);
+                        showDialog();
+                    }
+                }
+            })
+            /*mui.ajax(API_SERVER+'/api/checkPwd',{
+                data:{
+                    dwz:getQueryVariable('dwz'),
+                    pwd:e.value
+                },
+                dataType:'json',//服务器返回json格式数据
+                type:'post',//HTTP请求类型
+                headers:{'Content-Type':'application/json'},
+                success:function(data){
+                    if(data.code == 0){
+
+                    }else{
+                        mui.msg("密码");
+                        showDialog();
+                    }
+                },
+                error:function(xhr,type,errorThrown){
+                    //异常处理；
+                    console.log(type);
+                }
+            });*/
+
+        })
+    }
+    showDialog();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+.addUri {
+  position: relative; }
+
+.app_new {
+  width: 4.5454545455rem;
+  height: 0.9090909091rem; }
+
+.app_new .button_1 {
+  width: 1.8181818182rem;
+  height: 0.9090909091rem;
+  background-color: #1890ff;
+  border-radius: 0.1212121212rem;
+  text-align: center;
+  line-height: 0.9090909091rem;
+  color: #fff;
+  float: left;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: 0.3636363636rem; }
+
+.button_2 {
+  float: right !important; }
+
+.b_none {
+  border: 1px solid #fff;
+  background: none !important;
+  color: #fff; }
+
+.f_text {
+  width: 80%;
+  margin-top: 0.6060606061rem;
+  height: 4.5454545455rem;
+  padding: 0.303030303rem 0 0 0.303030303rem;
+  border-radius: 4px; }
+
+.display_none {
+  display: none !important; }
+
+.app_option {
+  width: 6.0606060606rem;
+  height: 0.9090909091rem;
+  margin-top: 0.6060606061rem; }
+
+.app_option .b_1 {
+  width: 2.8787878788rem;
+  height: 0.9090909091rem;
+  float: left;
+  background-color: #1890ff;
+  color: #fff;
+  text-align: center;
+  line-height: 0.9090909091rem;
+  cursor: pointer;
+  border-radius: 0.1212121212rem;
+  font-size: 0.3636363636rem; }
+
+.s_t_i {
+  width: 100%;
+  height: 0.9090909091rem;
+  margin-bottom: 0.6060606061rem; }
+
+.s_t_i .each_o {
+  width: 80%;
+  height: 1.1515151515rem;
+  float: left;
+  margin-right: 1.33%;
+  margin-top: 0.6060606061rem;
+  padding: 0;
+  border: none; }
+
+.each_o input {
+  width: 100%;
+  height: 100%;
+  float: left;
+  border-radius: 4px;
+  border: none;
+  padding-left: 3%; }
+
+.each_o:last-child {
+  margin-right: 0; }
+
+.app_option .b_2 {
+  float: right !important; }
+
+.s_t_main {
+  overflow: hidden;
+  width: 100%; }
+
+.el-input {
+  width: 80%;
+  height: 1.1515151515rem;
+  float: left;
+  border-radius: 4px; }
+
+/*# sourceMappingURL=mobile.css.map */

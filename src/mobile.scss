@@ -1,0 +1,105 @@
+@function px2rem($px, $base-font-size: 33px) {
+  @if (unitless($px)) {
+    @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return px2rem($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+.addUri{
+  position: relative;
+}
+.app_new{
+  width: px2rem(150px);
+  height: px2rem(30px);
+}
+.app_new .button_1{
+  width: px2rem(60px);
+  height: px2rem(30px);
+  background-color: #1890ff;
+  border-radius: px2rem(4px);
+  text-align: center;
+  line-height: px2rem(30px);
+  color: #fff;
+  float: left;
+  cursor: pointer;
+  transition: all 0.4s;
+  font-size: px2rem(12px);
+}
+.button_2{
+  float: right !important;
+}
+.b_none{
+  border:1px solid #fff;
+  background: none !important;
+  color: #fff;
+}
+.f_text{
+  width: 80%;
+  margin-top: px2rem(20px);
+  height: px2rem(150px);
+  padding: px2rem(10px) 0 0 px2rem(10px);
+  border-radius: 4px;
+}
+.display_none{
+  display: none !important;
+}
+.app_option{
+  width: px2rem(200px);
+  height: px2rem(30px);
+  margin-top: px2rem(20px);
+}
+.app_option .b_1{
+  width: px2rem(95px);
+  height: px2rem(30px);
+  float: left;
+  background-color: #1890ff;
+  color: #fff;
+  text-align: center;
+  line-height: px2rem(30px);
+  cursor: pointer;
+  border-radius: px2rem(4px);
+  font-size: px2rem(12px);
+}
+.s_t_i{
+  width: 100%;
+  height: px2rem(30px);
+  margin-bottom: px2rem(20px);
+}
+.s_t_i .each_o{
+  width: 80%;
+  height: px2rem(38px);
+  float: left;
+  margin-right: 1.33%;
+  margin-top: px2rem(20px);
+  padding: 0;
+  border: none;
+}
+
+.each_o input{
+  width: 100%;
+  height: 100%;
+  float: left;
+  border-radius: 4px;
+  border: none;
+  padding-left: 3%;
+}
+.each_o:last-child{
+  margin-right: 0;
+}
+
+.app_option .b_2{
+  float: right !important;
+}
+.s_t_main{
+  overflow: hidden;
+  width: 100%;
+}
+.el-input{
+  width: 80%;
+  height: px2rem(38px);
+  float: left;
+  border-radius: 4px;
+}

@@ -1,0 +1,94 @@
+.addUri{
+    position: relative;
+}
+.app_new{
+    width: 210px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.app_new .button_1{
+    width: 100px;
+    height: 40px;
+    background-color: #1890ff;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.button_2{
+    float: right !important;
+}
+.b_none{
+    border:1px solid #fff;
+    background: none !important;
+    color: #fff;
+}
+.f_text{
+    width: 100%;
+    height: 150px;
+    padding: 10px 0 0 10px;
+    border-radius: 4px;
+}
+.display_none{
+    display: none !important;
+}
+.app_option{
+    width: 370px;
+    margin: 0 auto;
+    height: 40px;
+    margin-top: 20px;
+}
+.app_option .b_1{
+    width: 180px;
+    height: 40px;
+    float: left;
+    background-color: #1890ff;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.s_t_i{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+}
+.s_t_i:last-child{
+    margin-top: 0px;
+}
+.s_t_i .each_o{
+    width: 24%;
+    height: 30px;
+    float: left;
+    margin-right: 1.33%;
+    background-color: #fff;
+}
+.s_t_i .each_o1{
+    width: 24%;
+    height: 30px;
+    float: left;
+    margin-right: 1.33%;
+    text-align: left;
+    color: #fff;
+}
+.each_o input{
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+}
+.each_o1:last-child,.each_o:last-child{
+    margin-right: 0;
+}
+
+.app_option .b_2{
+    float: right !important;
+}
+
+.el-input-group{
+    margin-top: 20px !important;
+}
